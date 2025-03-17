@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Spice Heritage</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/logo.png" alt="Spice Heritage Logo">
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="menu.html" class="active">Menu</a>
+            <a href="about.html">About</a>
+            <a href="reservations.html">Reservations</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <header class="menu-header">
+        <div class="container">
+            <h1>Our Menu</h1>
+            <p>Discover the authentic flavors of Bengal</p>
+        </div>
+    </header>
+
+    <section class="menu-section">
+        <div class="container">
+            <div class="menu-categories">
+                <button class="category-btn active" data-category="all">All</button>
+                <button class="category-btn" data-category="appetizers">Appetizers</button>
+                <button class="category-btn" data-category="main-course">Main Course</button>
+                <button class="category-btn" data-category="desserts">Desserts</button>
+                <button class="category-btn" data-category="drinks">Drinks</button>
+            </div>
+
+            <div class="menu-grid">
+                <!-- Appetizers -->
+                <div class="menu-item" data-category="appetizers">
+                    <div class="menu-item-image">
+                        <img src="images/menu/samosa.jpg" alt="Samosa">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Samosa</h3>
+                        <p>Crispy pastry filled with spiced potatoes and peas</p>
+                        <span class="price">₹150</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="appetizers">
+                    <div class="menu-item-image">
+                        <img src="images/menu/pakora.jpg" alt="Mixed Vegetable Pakora">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Mixed Vegetable Pakora</h3>
+                        <p>Crispy fritters made with assorted vegetables</p>
+                        <span class="price">₹180</span>
+                    </div>
+                </div>
+
+                <!-- Main Course -->
+                <div class="menu-item" data-category="main-course">
+                    <div class="menu-item-image">
+                        <img src="images/menu/biryani.jpg" alt="Mughlai Biryani">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Mughlai Biryani</h3>
+                        <p>Fragrant basmati rice cooked with tender meat and aromatic spices</p>
+                        <span class="price">₹450</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="main-course">
+                    <div class="menu-item-image">
+                        <img src="images/menu/butter-chicken.jpg" alt="Butter Chicken">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Butter Chicken</h3>
+                        <p>Tender chicken in rich, creamy tomato sauce</p>
+                        <span class="price">₹400</span>
+                    </div>
+                </div>
+
+                <!-- Desserts -->
+                <div class="menu-item" data-category="desserts">
+                    <div class="menu-item-image">
+                        <img src="images/menu/rasgulla.jpg" alt="Rasgulla">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Rasgulla</h3>
+                        <p>Soft, spongy cottage cheese balls in sugar syrup</p>
+                        <span class="price">₹120</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="desserts">
+                    <div class="menu-item-image">
+                        <img src="images/menu/gulab-jamun.jpg" alt="Gulab Jamun">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Gulab Jamun</h3>
+                        <p>Sweet milk dumplings in sugar syrup</p>
+                        <span class="price">₹120</span>
+                    </div>
+                </div>
+
+                <!-- Drinks -->
+                <div class="menu-item" data-category="drinks">
+                    <div class="menu-item-image">
+                        <img src="images/menu/mango-lassi.jpg" alt="Mango Lassi">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Mango Lassi</h3>
+                        <p>Sweet yogurt drink with fresh mango</p>
+                        <span class="price">₹150</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="drinks">
+                    <div class="menu-item-image">
+                        <img src="images/menu/masala-chai.jpg" alt="Masala Chai">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Masala Chai</h3>
+                        <p>Traditional spiced Indian tea</p>
+                        <span class="price">₹80</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <p>Phone: +91 33 2345 6789</p>
+                    <p>Email: info@spiceheritage.com</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Spice Heritage. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/menu.js"></script>
+</body>
+</html> 

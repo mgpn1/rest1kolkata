@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spice Heritage Logo</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #fff;
+        }
+
+        .logo-container {
+            width: 300px;
+            height: 300px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            position: relative;
+            text-align: center;
+            color: #e67e22;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .logo-text {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin: 0;
+            line-height: 1.2;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .tagline {
+            font-size: 0.8em;
+            color: #666;
+            margin-top: 10px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 300;
+        }
+
+        .spice-icon {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 60px;
+            background: #e67e22;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 30px;
+            box-shadow: 0 4px 10px rgba(230,126,34,0.3);
+        }
+
+        .spice-icon::before {
+            content: '🌶️';
+            font-size: 40px;
+        }
+
+        .decorative-circle {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 2px solid #e67e22;
+            border-radius: 50%;
+            animation: rotate 20s linear infinite;
+        }
+
+        .decorative-circle::before,
+        .decorative-circle::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: #e67e22;
+            border-radius: 50%;
+        }
+
+        .decorative-circle::before {
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .decorative-circle::after {
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .spice-dots {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .spice-dot {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: #e67e22;
+            border-radius: 50%;
+        }
+
+        .spice-dot:nth-child(1) { top: 20%; left: 20%; }
+        .spice-dot:nth-child(2) { top: 20%; right: 20%; }
+        .spice-dot:nth-child(3) { bottom: 20%; left: 20%; }
+        .spice-dot:nth-child(4) { bottom: 20%; right: 20%; }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="logo-container">
+        <div class="decorative-circle"></div>
+        <div class="spice-dots">
+            <div class="spice-dot"></div>
+            <div class="spice-dot"></div>
+            <div class="spice-dot"></div>
+            <div class="spice-dot"></div>
+        </div>
+        <div class="spice-icon"></div>
+        <div class="logo">
+            <h1 class="logo-text">Spice<br>Heritage</h1>
+            <p class="tagline">Authentic Indian Cuisine</p>
+        </div>
+    </div>
+</body>
+</html> 
