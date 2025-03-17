@@ -24,82 +24,120 @@
             align-items: center;
             background: #fff;
             border-radius: 50%;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: 3px solid #d35400;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .logo-container:hover {
+            transform: scale(1.02);
         }
 
         .logo {
             position: relative;
             text-align: center;
-            color: #e67e22;
+            color: #d35400;
             font-family: 'Playfair Display', serif;
+            z-index: 2;
+            padding: 20px;
         }
 
         .logo-text {
-            font-size: 2.5em;
+            font-size: 2.8em;
             font-weight: 700;
             margin: 0;
-            line-height: 1.2;
+            line-height: 1.1;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .logo-text::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: #d35400;
+            border-radius: 2px;
         }
 
         .tagline {
-            font-size: 0.8em;
+            font-size: 0.9em;
             color: #666;
-            margin-top: 10px;
+            margin-top: 15px;
             font-family: 'Poppins', sans-serif;
-            font-weight: 300;
+            font-weight: 400;
+            background: rgba(255,255,255,0.95);
+            padding: 8px 20px;
+            border-radius: 25px;
+            display: inline-block;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            letter-spacing: 1px;
         }
 
         .spice-icon {
             position: absolute;
-            top: -20px;
+            top: -25px;
             left: 50%;
             transform: translateX(-50%);
-            width: 60px;
-            height: 60px;
-            background: #e67e22;
+            width: 90px;
+            height: 90px;
+            background: linear-gradient(135deg, #d35400, #e67e22);
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
             color: #fff;
-            font-size: 30px;
-            box-shadow: 0 4px 10px rgba(230,126,34,0.3);
+            font-size: 35px;
+            box-shadow: 0 5px 15px rgba(211,84,0,0.3);
+            border: 4px solid #fff;
+            z-index: 2;
+            transition: transform 0.3s ease;
+        }
+
+        .spice-icon:hover {
+            transform: translateX(-50%) scale(1.1);
         }
 
         .spice-icon::before {
             content: '🌶️';
-            font-size: 40px;
+            font-size: 55px;
         }
 
         .decorative-circle {
             position: absolute;
             width: 100%;
             height: 100%;
-            border: 2px solid #e67e22;
+            border: 2px solid #d35400;
             border-radius: 50%;
-            animation: rotate 20s linear infinite;
+            animation: rotate 30s linear infinite;
+            opacity: 0.2;
         }
 
         .decorative-circle::before,
         .decorative-circle::after {
             content: '';
             position: absolute;
-            width: 20px;
-            height: 20px;
-            background: #e67e22;
+            width: 35px;
+            height: 35px;
+            background: linear-gradient(135deg, #d35400, #e67e22);
             border-radius: 50%;
+            box-shadow: 0 0 15px rgba(211,84,0,0.4);
         }
 
         .decorative-circle::before {
-            top: -10px;
+            top: -17px;
             left: 50%;
             transform: translateX(-50%);
         }
 
         .decorative-circle::after {
-            bottom: -10px;
+            bottom: -17px;
             left: 50%;
             transform: translateX(-50%);
         }
@@ -121,22 +159,73 @@
 
         .spice-dot {
             position: absolute;
-            width: 8px;
-            height: 8px;
-            background: #e67e22;
+            width: 15px;
+            height: 15px;
+            background: linear-gradient(135deg, #d35400, #e67e22);
             border-radius: 50%;
+            box-shadow: 0 0 15px rgba(211,84,0,0.4);
+            transition: transform 0.3s ease;
         }
 
-        .spice-dot:nth-child(1) { top: 20%; left: 20%; }
-        .spice-dot:nth-child(2) { top: 20%; right: 20%; }
-        .spice-dot:nth-child(3) { bottom: 20%; left: 20%; }
-        .spice-dot:nth-child(4) { bottom: 20%; right: 20%; }
+        .spice-dot:nth-child(1) { top: 15%; left: 15%; }
+        .spice-dot:nth-child(2) { top: 15%; right: 15%; }
+        .spice-dot:nth-child(3) { bottom: 15%; left: 15%; }
+        .spice-dot:nth-child(4) { bottom: 15%; right: 15%; }
+
+        .spice-dot:hover {
+            transform: scale(1.2);
+        }
+
+        .background-pattern {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                45deg,
+                rgba(211,84,0,0.03) 0px,
+                rgba(211,84,0,0.03) 10px,
+                transparent 10px,
+                transparent 20px
+            );
+            opacity: 0.7;
+        }
+
+        .ornament {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 1px solid rgba(211,84,0,0.1);
+            border-radius: 50%;
+            transform: rotate(45deg);
+        }
+
+        .ornament::before,
+        .ornament::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: #d35400;
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .ornament::before {
+            left: -10px;
+        }
+
+        .ornament::after {
+            right: -10px;
+        }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="logo-container">
+        <div class="background-pattern"></div>
         <div class="decorative-circle"></div>
+        <div class="ornament"></div>
         <div class="spice-dots">
             <div class="spice-dot"></div>
             <div class="spice-dot"></div>
